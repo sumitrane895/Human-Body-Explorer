@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Body Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-dot"></span> Human Body Explorer</div>
+  <nav><a href="#explore">Explore</a><a href="#systems">Systems</a><a href="#about">About</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">INTERACTIVE ANATOMY</span>
+    <h1>Explore the <span>Human Body</span></h1>
+    <p>Discover organs, bones, muscles and body systems through labeled anatomy diagrams and simple explanations.</p>
+    <a class="primary-btn" href="#systems">Start Exploring ↓</a>
+  </div>
+  <div class="hero-card">
+    <img src="assets/body-overview.jpg" alt="Human body organ overview">
+    <div class="hero-label">Choose a body system to begin</div>
+  </div>
+</section>
+
+<section id="explore" class="section">
+  <div class="section-heading">
+    <div><span class="eyebrow">OVERVIEW</span><h2>Human body at a glance</h2></div>
+    <p>Every card opens an interactive learning panel with important structures and functions.</p>
+  </div>
+  <div class="overview-grid">
+    <button class="overview-card" data-system="overview"><img src="assets/body-overview.jpg"><span>Body Systems</span><small>Major organs & functions</small></button>
+    <button class="overview-card" data-system="skeleton"><img src="assets/skeleton.jpg"><span>Skeletal System</span><small>Bones & support</small></button>
+    <button class="overview-card" data-system="muscles"><img src="assets/muscular-system.webp"><span>Muscular System</span><small>Muscles & movement</small></button>
+  </div>
+</section>
+
+<section id="systems" class="section systems-section">
+  <div class="section-heading">
+    <div><span class="eyebrow">EXPLORE BY SYSTEM</span><h2>Click a body system</h2></div>
+    <input id="search" class="search" type="search" placeholder="Search heart, brain, femur...">
+  </div>
+  <div class="filter-row">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="organs">Organs</button>
+    <button class="filter" data-filter="systems">Systems</button>
+    <button class="filter" data-filter="special">Special senses</button>
+  </div>
+
+  <div class="system-grid" id="systemGrid">
+    <button class="system-card" data-system="heart" data-category="systems">
+      <div class="image-wrap"><img src="assets/heart.png"></div><div class="card-text"><span class="tag">CIRCULATORY</span><h3>Heart</h3><p>Pumps blood throughout the body.</p></div><span class="arrow">→</span>
+    </button>
+    <button class="system-card" data-system="blood" data-category="systems">
+      <div class="image-wrap"><img src="assets/blood-circulation.jpg"></div><div class="card-text"><span class="tag">CIRCULATION</span><h3>Blood Flow</h3><p>Trace pulmonary and systemic circulation.</p></div><span class="arrow">→</span>
+    </button>
+    <button class="system-card" data-system="lungs" data-category="systems">
+      <div class="image-wrap"><img src="assets/lungs.jpg"></div><div class="card-text"><span class="tag">RESPIRATORY</span><h3>Lungs</h3><p>Exchange oxygen and carbon dioxide.</p></div><span class="arrow">→</span>
+    </button>
+    <button class="system-card" data-system="kidneys" data-category="organs">
+      <div class="image-wrap"><img src="assets/kidney.webp"></div><div class="card-text"><span class="tag">URINARY</span><h3>Kidneys</h3><p>Filter blood and help form urine.</p></div><span class="arrow">→</span>
+    </button>
+    <button class="system-card" data-system="skeleton" data-category="systems">
+      <div class="image-wrap"><img src="assets/skeleton.jpg"></div><div class="card-text"><span class="tag">SKELETAL</span><h3>Bones</h3><p>Support, protect and enable movement.</p></div><span class="arrow">→</span>
+    </button>
+    <button class="system-card" data-system="muscles" data-category="systems">
+      <div class="image-wrap"><img src="assets/muscular-system-detail.webp"></div><div class="card-text"><span class="tag">MUSCULAR</span><h3>Muscles</h3><p>Produce movement and maintain posture.</p></div><span class="arrow">→</span>
+    </button>
+    <button class="system-card" data-system="nervous" data-category="systems">
+      <div class="image-wrap"><img src="assets/nervous-system-detail.png"></div><div class="card-text"><span class="tag">NERVOUS</span><h3>Nervous System</h3><p>Controls communication and coordination.</p></div><span class="arrow">→</span>
+    </button>
+    <button class="system-card" data-system="brain" data-category="organs">
+      <div class="image-wrap"><img src="assets/brain.jpg"></div><div class="card-text"><span class="tag">NERVOUS SYSTEM</span><h3>Brain</h3><p>Processes information and controls the body.</p></div><span class="arrow">→</span>
+    </button>
+    <button class="system-card" data-system="digestive" data-category="systems">
+      <div class="image-wrap"><img src="assets/digestive-system.jpg"></div><div class="card-text"><span class="tag">DIGESTIVE</span><h3>Digestive System</h3><p>Breaks food down and absorbs nutrients.</p></div><span class="arrow">→</span>
+    </button>
+    <button class="system-card" data-system="eye" data-category="special">
+      <div class="image-wrap"><img src="assets/eye.jpg"></div><div class="card-text"><span class="tag">SPECIAL SENSE</span><h3>Eye</h3><p>Detects light and creates visual information.</p></div><span class="arrow">→</span>
+    </button>
+    <button class="system-card" data-system="ear" data-category="special">
+      <div class="image-wrap"><img src="assets/ear.jpg"></div><div class="card-text"><span class="tag">SPECIAL SENSE</span><h3>Ear</h3><p>Supports hearing and balance.</p></div><span class="arrow">→</span>
+    </button>
+    <button class="system-card" data-system="overview" data-category="organs">
+      <div class="image-wrap"><img src="assets/body-overview.jpg"></div><div class="card-text"><span class="tag">ORGANS</span><h3>Major Organs</h3><p>Explore the body's main internal organs.</p></div><span class="arrow">→</span>
+    </button>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div><span class="eyebrow">LEARNING TOOL</span><h2>Learn anatomy visually</h2><p>Choose a system, open its diagram, then select a labeled structure to learn what it does and where it fits in the body.</p></div>
+  <div class="about-points"><div><b>01</b><span>Choose a system</span></div><div><b>02</b><span>Open the diagram</span></div><div><b>03</b><span>Explore structures</span></div></div>
+</section>
+</main>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-panel">
+    <button class="close" id="closeModal">×</button>
+    <div class="modal-image"><img id="modalImage" src="" alt=""></div>
+    <div class="modal-content">
+      <span class="tag" id="modalTag"></span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <h4>Important structures</h4>
+      <div class="parts" id="parts"></div>
+      <div class="part-detail" id="partDetail"></div>
+    </div>
+  </div>
+</div>
+
+<footer><span>Human Body Explorer</span><span>Educational anatomy project</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
